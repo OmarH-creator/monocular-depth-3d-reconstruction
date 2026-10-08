@@ -29,7 +29,7 @@ Image.fromarray((np.stack([d, 1 - np.abs(2 * d - 1), 1 - d], -1) * 255).astype(n
 ```
 
 Notes: this is the general V11 model (not the hall-tuned one). Trained on indoor scenes, 0.3-80 m range; expect it to be weakest on outdoor and very bright scenes.
-Check on the hall frame above: the ONNX file matches the original model to 0.3% (median).
+Checked against the original PyTorch model on a hall frame: the ONNX file matches to 0.3% (median).
 
 ## Measured results
 Rendered from each frame's exact camera and compared with the photo (60 views over the whole walk):
